@@ -7,12 +7,12 @@ import (
 
 	"github.com/caddyserver/caddy/v2"
 	"github.com/caddyserver/caddy/v2/caddyconfig/caddyfile"
-	"github.com/michaelrommel/libdnsexecupdater"
+	"github.com/michaelrommel/ldnsupd"
 )
 
 
 // Provider lets Caddy read and manipulate DNS records hosted by this DNS provider.
-type Provider struct{ *libdnsexecupdater.Provider }
+type Provider struct{ *ldnsupd.Provider }
 
 func init() {
 	caddy.RegisterModule(Provider{})
@@ -22,7 +22,7 @@ func init() {
 func (Provider) CaddyModule() caddy.ModuleInfo {
 	return caddy.ModuleInfo{
 		ID:  "dns.providers.cdydnsupd",
-		New: func() caddy.Module { return &Provider{new(libdnsexecupdater.Provider)} },
+		New: func() caddy.Module { return &Provider{new(ldnsupd.Provider)} },
 	}
 }
 
