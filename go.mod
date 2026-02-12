@@ -1,10 +1,10 @@
-module github.com/michaelrommel/caddyexecupdater
+module github.com/michaelrommel/cdydnsupd
 
 go 1.25
 
 require (
 	github.com/caddyserver/caddy/v2 v2.10.2
-	github.com/michaelrommel/libdnsexecupdater v0.0.0-00010101000000-000000000000
+	github.com/michaelrommel/ldnsupd v0.0.0-00010101000000-000000000000
 )
 
 require (
@@ -42,4 +42,4 @@ require (
 	google.golang.org/protobuf v1.36.6 // indirect
 )
 
-replace github.com/michaelrommel/libdnsexecupdater => ../libdnsexecupdater
+replace github.com/michaelrommel/ldnsupd => ../ldnsupd

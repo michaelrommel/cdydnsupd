@@ -1,4 +1,4 @@
-package caddyexecupdater
+package cdydnsupd
 
 import (
 	// "fmt"
@@ -21,7 +21,7 @@ func init() {
 // CaddyModule returns the Caddy module information.
 func (Provider) CaddyModule() caddy.ModuleInfo {
 	return caddy.ModuleInfo{
-		ID:  "dns.providers.caddyexecupdater",
+		ID:  "dns.providers.cdydnsupd",
 		New: func() caddy.Module { return &Provider{new(libdnsexecupdater.Provider)} },
 	}
 }
